@@ -1,0 +1,71 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>A weather Tracking Website</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'weather/style.css'%}">
+</head>
+
+<body>
+	<section class="hero is-primary">
+	   <div class="hero-body">
+	   	  <div class="container">
+	   	  	 <h1 class="title">
+	   	  	 	 Track the weather condition of cities around the world!
+	   	  	 </h1> 
+	   	  </div>
+	   </div> 
+ 	</section>
+	<section class="section_1">
+		<div class="container">
+			<div class="columns">
+				<div class="column is-offset-4 is 4">
+					<form method="POST">
+							{% csrf_token %}
+						<div class="field has addons">
+							<div class="control is expanded">
+								<div class="control">
+									{{ form.name }}
+									 <button type="submit" class="button_1">Search</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+    <section class="section">
+    	<div class="container">
+    		<div class="columns">
+    			<div class="column is-offset-4">
+    				<div class="box">
+    					<article class="media">
+    						<div class="media">
+    							<div class="media-left">
+    								<figure class="image is 50x50">
+    								<img src="http://openweathermap.org/img/w/{{ city_weather_details.Icon}}.png" alt="image">	
+    								</figure>
+    								<div>
+    									<div class="media-content">
+    										<p>
+    											<span class="title_1">{{city_weather_details.City}}</span>
+    											<br>
+    											<span class="subtitle">{{city_weather_details.Temperature}}F</span>
+    											<br>{{ city_weather_details.description }}
+    										</p>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</article>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+</body>
+</html>

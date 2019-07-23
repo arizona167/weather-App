@@ -1,0 +1,48 @@
+body {
+	background-color: white;
+	
+}
+
+.title {
+	text-align: center;
+	color: white;
+
+
+}
+.title_1{
+	color:green;
+	col
+}
+.hero-body{
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    
+}
+.section_1 form{
+	float: right;
+    margin-top: 65px;
+    margin-right:180px;
+}
+.section_1 input{
+	padding: 4px;
+    height: 25px;
+    width: 250px;
+    margin-top:80px;
+}
+button{
+	height: 38px;
+    background: #e8491d;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff
+
+}
+.box {
+	margin-top:12px;
+	float:right;
+	padding-left:59px;
+	text-align: center;
+	text-transform:uppercase;
+}
